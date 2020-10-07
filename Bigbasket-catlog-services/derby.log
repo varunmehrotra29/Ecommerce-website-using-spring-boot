@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Aug 14 12:34:39 IST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0173-ebc8-e4bd-0000049d5a38 
+on database directory memory:D:\spring\Big Basket\Bigbasket-catlog-services\07507d60-d43c-4c72-9c19-05d5321c75e1 with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
+Loaded from file:/C:/Users/Varun%20Mehrotra/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_261-b12
+user.dir=D:\spring\Big Basket\Bigbasket-catlog-services
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
