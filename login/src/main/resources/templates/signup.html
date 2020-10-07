@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<title>Signup Page</title>
+	
+</head>
+
+<body>
+<center>
+<div class="sidenav"><br><br>
+         <div class="login-main-text">
+            <h2>Application<br> Signup Page</h2>
+            <p>Register from here to access.</p>
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+            <br>
+               <form th:action="@{/signup}" th:object=${u1} >
+               
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Enter firstname" required name="firstname">
+                  </div>
+                  <br>
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Enter lastname" required name="lastname">
+                  </div><br>
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Enter mobile number" required name="mobile">
+                  </div><br>
+                  <div class="form-group">
+                     <input type="email" class="form-control" placeholder="Enter Email" name="email" required th:value=${mobile}>
+                  </div><br>
+                  <div class="form-group">
+                     <input type="password" class="form-control" placeholder="Enter password" required name="password">
+                  </div><br>
+                  <div class="form-group">
+                     <input type="password" class="form-control" placeholder="Confirm password" required name="confirmPassword">
+                  </div><br>
+                  <button type="submit" class="btn btn-secondary" >Register</button><br><br>
+                  <p class="d-inline">Already Registered ? </p><span><a href="/loginuser" class="stretched-link">Signin</a></span>
+               </form>
+            </div>
+         </div>
+      </div>
+
+</center>
+</body>
+
+</html>
+
+
+
+
+
+

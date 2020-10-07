@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<title>Users Page</title>
+	
+	<style type="text/css">
+	
+	body{
+	margin: 100px;
+	}
+	</style>
+</head>
+
+<body>
+<center>
+<h2 >USERS</h2><a  th:href="|@{delete}|" class="btn btn-danger float-right mr-5">Reset Database</a>
+		<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile Number</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr th:each="user : *{users}"    >
+      <td th:text="${user.firstname}"></td>
+      <td th:text="${user.lastname}"></td>
+      <td th:text="${user.email}"></td>
+      <td th:text="${user.mobileNumber}"></td>
+      <td th:text="${user.status}"></td>
+      <td th:text="${user.date}"></td>
+      <td><a th:href="|@{/delete/{id}(id=${user.id})}|" class="btn btn-danger">Delete</a></td>
+      <td><a th:href="|@{/block/{id}(id=${user.id})}|" class="btn btn-success">Block</a></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</body>
+
+</html>
+
+
+
+
+
+
