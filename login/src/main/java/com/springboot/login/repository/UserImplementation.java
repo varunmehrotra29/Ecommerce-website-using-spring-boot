@@ -67,11 +67,22 @@ public class UserImplementation {
 	
 	//deactivating user for time span 7 days
 	
-	public void updateStatus(int id) {
+	//updating user status active/deactive
+	 
+		public void updateStatus(String status,int id) {
+			LocalDate date=LocalDate.now();
+			
+			//deactivating user for time span 7 days
+			if(status.equals("deactive")) {
+			 date = LocalDate.now().plusDays(7);
+			}
+			user.update(status, date, id);
+		}
+	/*public void updateStatus(int id) {
 		LocalDate date = LocalDate.now().plusDays(7);
 		user.update("deactive", date, id);
 	}
-	
+	*/
 	// activating user
 	
 	public void activateUser(int id) {

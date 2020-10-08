@@ -131,7 +131,17 @@ public class UserController {
 	@GetMapping("/block/{id}")
 	@PostMapping(value = "/block/{id}")
 	public String updateUserStatus(@PathVariable int id) {
-		user.updateStatus(id);
+		user.updateStatus("deactive", id);
 		return "redirect:/admin";
 	}
+
+	// activate user
+
+	@GetMapping("/unblock/{id}")
+	@PostMapping(value = "/unblock/{id}")
+	public String unblockUser(@PathVariable int id) {
+		user.updateStatus("active", id);
+		return "redirect:/admin";
+	}
+
 }

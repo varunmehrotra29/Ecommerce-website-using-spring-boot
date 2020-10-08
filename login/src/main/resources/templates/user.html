@@ -18,7 +18,7 @@
 
 <body>
 <center>
-<h2 >USERS</h2><a  th:href="|@{delete}|" class="btn btn-danger float-right mr-5">Reset Database</a>
+<h2 >USERS</h2><a  th:href="|@{delete}|" class="btn btn-danger float-right mr-5">RESET</a>
 		<table class="table">
   <thead>
     <tr>
@@ -38,6 +38,7 @@
       <td th:text="${user.date}"></td>
       <td><a th:href="|@{/delete/{id}(id=${user.id})}|" class="btn btn-danger">Delete</a></td>
       <td><a th:href="|@{/block/{id}(id=${user.id})}|" class="btn btn-success">Block</a></td>
+      <td><a th:href="|@{/unblock/{id}(id=${user.id})}|" class="btn btn-success">UnBlock</a></td>
     </tr>
   </tbody>
 </table>
